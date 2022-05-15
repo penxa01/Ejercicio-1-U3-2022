@@ -19,6 +19,10 @@ class Facultad:
     def __str__(self):
         return ("Codigo:{}\nNombre:{}       Direccion:{}\nTelefono:{}".format(self.__codigo,self.__Nombre,self.__direccion,self.__Telefono))
     
+    def __del__(self):
+        print("Borrando facultad y carreras que pertenecen a la misma")
+        del self.__CantCarr
+        
     def getNombre(self):
         return self.__Nombre
     
